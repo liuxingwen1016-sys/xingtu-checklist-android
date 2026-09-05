@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.xinghan.xingtu.feature.home.HomeFragment"
+        android:label="@string/nav_home" />
+
+    <fragment
+        android:id="@+id/tripsFragment"
+        android:name="com.xinghan.xingtu.feature.trips.TripsFragment"
+        android:label="@string/nav_trips">
+        <argument
+            android:name="filter"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.xinghan.xingtu.feature.stats.StatsFragment"
+        android:label="@string/nav_stats" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.xinghan.xingtu.feature.settings.SettingsFragment"
+        android:label="@string/nav_settings" />
+
+    <fragment
+        android:id="@+id/tripDetailFragment"
+        android:name="com.xinghan.xingtu.feature.tripdetail.TripDetailFragment"
+        android:label="@string/nav_trips">
+        <argument
+            android:name="tripId"
+            app:argType="string" />
+        <deepLink
+            app:action="android.intent.action.VIEW"
+            app:uri="xingtu://trip/{tripId}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tripEditFragment"
+        android:name="com.xinghan.xingtu.feature.tripedit.TripEditFragment"
+        android:label="@string/trip_edit_title_create">
+        <argument
+            android:name="tripId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/itemEditDialog"
+        android:name="com.xinghan.xingtu.feature.itemedit.ItemEditDialogFragment"
+        android:label="@string/item_edit_title_create">
+        <argument
+            android:name="tripId"
+            app:argType="string" />
+        <argument
+            android:name="itemId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/nativeLabFragment"
+        android:name="com.xinghan.xingtu.feature.lab.NativeLabFragment"
+        android:label="@string/lab_title" />
+</navigation>

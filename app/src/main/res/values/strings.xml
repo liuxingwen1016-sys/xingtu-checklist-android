@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="item_important">重要</string>
+    <string name="app_name">星途清单</string>
+    <string name="app_slogan">每次出发，都准备得刚刚好。</string>
+    <string name="app_demo_note">仅用于培训演示 · 不可上架</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">首页</string>
+    <string name="nav_trips">行程</string>
+    <string name="nav_stats">数据</string>
+    <string name="nav_settings">我的</string>
+
+    <!-- Common -->
+    <string name="action_retry">重试</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_confirm">确认</string>
+    <string name="action_delete">删除</string>
+    <string name="action_back">返回</string>
+    <string name="error_generic">操作失败，请重试</string>
+    <string name="error_load_failed">加载失败</string>
+
+    <!-- Home -->
+    <string name="home_greeting_morning">早上好，学习者</string>
+    <string name="home_greeting_afternoon">下午好，学习者</string>
+    <string name="home_greeting_evening">晚上好，学习者</string>
+    <string name="home_section_todo">出发前要做</string>
+    <string name="home_hero_subtitle">%1$s · %2$s</string>
+    <string name="home_countdown_days">距出发 %1$d 天</string>
+    <string name="home_ongoing_today">进行中</string>
+    <string name="home_completed_of">%1$d/%2$d 已完成</string>
+    <string name="home_empty_title">还没有行程</string>
+    <string name="home_empty_subtitle">创建你的第一个行程，开始准备吧</string>
+    <string name="home_create_trip">新建行程</string>
+    <string name="cd_hero_card">下一行程卡片</string>
+    <string name="cd_pending_item_check">完成事项</string>
+    <string name="home_item_completed">已完成</string>
+    <string name="home_trip_page_description">第%1$d个，共%2$d个行程：%3$s</string>
+
+    <!-- Trips -->
+    <string name="trips_title">我的行程</string>
+    <string name="trips_search_hint">搜索行程或目的地</string>
+    <string name="trips_filter_all">全部</string>
+    <string name="trips_filter_upcoming">即将开始</string>
+    <string name="trips_filter_ongoing">进行中</string>
+    <string name="trips_filter_finished">已结束</string>
+    <string name="trips_empty_title">没有符合条件的行程</string>
+    <string name="trips_empty_subtitle">调整搜索或筛选条件，或者新建一个行程</string>
+    <string name="status_upcoming">即将开始</string>
+    <string name="status_ongoing">进行中</string>
+    <string name="status_finished">已结束</string>
+    <string name="cd_trip_card">行程卡片</string>
+    <string name="trips_two_pane_placeholder_title">选择一个行程查看详情</string>
+    <string name="trips_two_pane_placeholder_subtitle">左侧列表中的任意行程</string>
+
+    <!-- Trip detail -->
+    <string name="detail_add_item">添加事项</string>
+    <string name="detail_empty_items">还没有清单项，点击下方按钮添加</string>
+    <string name="detail_not_found_title">行程不存在或已删除</string>
+    <string name="detail_not_found_subtitle">它可能已经被删除了</string>
+    <string name="detail_note_label">备注</string>
+    <string name="detail_delete_trip_title">删除行程</string>
+    <string name="detail_delete_trip_message">将删除“%1$s”及其全部清单项，此操作不可恢复。</string>
+    <string name="detail_delete_item_title">删除事项</string>
+    <string name="detail_delete_item_message">将删除“%1$s”，此操作不可恢复。</string>
+    <string name="detail_trip_deleted">行程已删除</string>
+    <string name="detail_item_deleted">事项已删除</string>
+    <string name="detail_share_trip">分享行程</string>
+    <string name="detail_edit_trip">编辑行程</string>
+    <string name="detail_delete_trip">删除行程</string>
+    <string name="cd_item_checkbox">标记完成状态</string>
+    <string name="detail_progress_content_description">完成进度 %1$d%%</string>
+
+    <!-- Categories -->
+    <string name="category_document">证件</string>
+    <string name="category_digital">数码</string>
+    <string name="category_clothing">衣物</string>
+    <string name="category_work">工作</string>
+    <string name="category_other">其他</string>
+
+    <!-- Trip edit -->
+    <string name="trip_edit_title_create">新建行程</string>
+    <string name="trip_edit_title_edit">编辑行程</string>
+    <string name="field_trip_title">行程名称</string>
+    <string name="field_destination">目的地</string>
+    <string name="field_start_date">开始日期</string>
+    <string name="field_end_date">结束日期</string>
+    <string name="field_note">备注（选填）</string>
+    <string name="hint_trip_title">请输入行程名称</string>
+    <string name="hint_destination">请输入目的地</string>
+    <string name="hint_note">可填写会议、交通等补充说明</string>
+    <string name="section_theme">主题色</string>
+    <string name="section_template">清单模板</string>
+    <string name="template_business">商务出差</string>
+    <string name="template_business_desc">证件、数码与会议资料一应俱全</string>
+    <string name="template_weekend">周末旅行</string>
+    <string name="template_weekend_desc">轻装出行的基础清单</string>
+    <string name="template_custom">自定义</string>
+    <string name="template_custom_desc">从一个空白清单开始</string>
+    <string name="template_business_card">商务出差</string>
+    <string name="template_weekend_card">周末旅行</string>
+    <string name="template_custom_card">自定义</string>
+    <string name="button_create_trip">创建行程</string>
+    <string name="button_save_trip">保存修改</string>
+    <string name="error_field_empty">请填写内容</string>
+    <string name="error_field_too_long">内容过长</string>
+    <string name="error_date_order">结束日期不能早于开始日期</string>
+    <string name="error_save_failed">保存失败，请重试</string>
+    <string name="trip_edit_created">行程已创建</string>
+    <string name="trip_edit_updated">行程已更新</string>
+    <string name="cd_theme_option">主题色选项</string>
+    <string name="theme_name_indigo">星途紫</string>
+    <string name="theme_name_blue">晴空蓝</string>
+    <string name="theme_name_coral">珊瑚橙</string>
+    <string name="theme_name_teal">青碧</string>
+    <string name="theme_name_amber">琥珀</string>
+    <string name="theme_name_violet">暮紫</string>
+
+    <!-- Item edit -->
+    <string name="item_edit_title_create">添加清单项</string>
+    <string name="item_edit_title_edit">编辑清单项</string>
+    <string name="field_item_title">事项标题</string>
+    <string name="field_item_note">备注（选填）</string>
+    <string name="item_priority_important">标记为重要</string>
+    <string name="item_edit_discard_title">放弃修改？</string>
+    <string name="item_edit_discard_message">当前内容尚未保存</string>
+    <string name="item_edit_discard_confirm">放弃</string>
+    <string name="item_edit_saved">已保存</string>
+    <string name="section_category">分类</string>
+    <string name="section_priority">优先级</string>
+    <string name="item_edit_deleted">事项已删除</string>
+
+    <!-- Stats -->
+    <string name="stats_title">行程数据</string>
+    <string name="stats_trip_count">%1$d 行程</string>
+    <string name="stats_completed_count">%1$d 已完成</string>
+    <string name="stats_completion_rate">%1$d%% 完成率</string>
+    <string name="stats_completion_label">完成率</string>
+    <string name="stats_seven_day_trend">近7天完成趋势</string>
+    <string name="stats_category_rate">分类完成率</string>
+    <string name="stats_empty_title">暂无数据</string>
+    <string name="stats_empty_subtitle">创建行程并开始打卡后，这里会出现统计</string>
+    <string name="cd_bar_chart">近7天完成趋势柱状图</string>
+    <string name="cd_donut_chart">分类完成率环形图</string>
+
+    <!-- Settings -->
+    <string name="settings_title">我的</string>
+    <string name="settings_user_name">学习者</string>
+    <string name="settings_section_appearance">外观</string>
+    <string name="settings_theme_mode">深色模式</string>
+    <string name="settings_theme_system">跟随系统</string>
+    <string name="settings_theme_light">浅色模式</string>
+    <string name="settings_theme_dark">深色模式</string>
+    <string name="settings_theme_dark_desc">切换移动端明暗外观</string>
+    <string name="settings_section_feedback">提醒与反馈</string>
+    <string name="settings_haptic">振动反馈</string>
+    <string name="settings_haptic_desc">关键操作时提供轻触觉反馈</string>
+    <string name="settings_notification">通知提醒</string>
+    <string name="settings_notification_desc">允许应用发送演示通知</string>
+    <string name="settings_section_lab">演示能力</string>
+    <string name="settings_native_lab">原生能力实验室</string>
+    <string name="settings_native_lab_desc">通知、振动、分享与设备信息</string>
+    <string name="settings_section_data">数据</string>
+    <string name="settings_reset_demo">重置演示数据</string>
+    <string name="settings_reset_demo_desc">恢复为两条固定的演示行程</string>
+    <string name="settings_reset_confirm_title">重置演示数据</string>
+    <string name="settings_reset_confirm_message">将清空全部行程与清单项，并恢复为固定的演示数据。此操作不可恢复。</string>
+    <string name="settings_reset_done">演示数据已重置</string>
+    <string name="settings_reset_failed">重置失败，请重试</string>
+    <string name="settings_version">星途清单 Demo · v%1$s</string>
+
+    <!-- Native lab -->
+    <string name="lab_title">原生能力实验室</string>
+    <string name="lab_section_device">当前设备</string>
+    <string name="lab_os_version">操作系统</string>
+    <string name="lab_device_model">设备型号</string>
+    <string name="lab_window_size">窗口尺寸</string>
+    <string name="lab_theme_mode">深色模式</string>
+    <string name="lab_notification_status">通知权限</string>
+    <string name="lab_notification_granted">已授权</string>
+    <string name="lab_notification_denied">未授权</string>
+    <string name="lab_section_actions">能力演示</string>
+    <string name="lab_action_notification">发送测试通知</string>
+    <string name="lab_action_notification_desc">立即发送一条本地通知</string>
+    <string name="lab_action_vibration">触发振动反馈</string>
+    <string name="lab_action_vibration_desc">一次短促的确认振动</string>
+    <string name="lab_action_share">调用系统分享</string>
+    <string name="lab_action_share_desc">分享下一行程摘要文本</string>
+    <string name="lab_action_widget">查看桌面小组件说明</string>
+    <string name="lab_action_widget_desc">Widget 的使用方式</string>
+    <string name="lab_rerun_detect">重新检测</string>
+    <string name="lab_state_ready">就绪</string>
+    <string name="lab_state_success">成功</string>
+    <string name="lab_state_denied">已拒绝</string>
+    <string name="lab_state_error">失败</string>
+    <string name="lab_notification_sent">测试通知已发送</string>
+    <string name="lab_notification_denied_message">通知权限未授予，核心功能不受影响</string>
+    <string name="lab_vibration_done">振动已触发</string>
+    <string name="lab_share_no_trip">暂无行程可分享</string>
+    <string name="lab_widget_desc_title">桌面小组件</string>
+    <string name="lab_widget_desc_content">长按桌面空白处，从小组件列表中选择“星途清单”添加。小组件展示下一行程、倒计时与完成进度，点击可直接进入行程详情。</string>
+    <string name="lab_widget_desc_neutral">知道了</string>
+
+    <!-- Widget -->
+    <string name="widget_next_trip_label">下一行程</string>
+    <string name="widget_no_trip_title">还没有行程</string>
+    <string name="widget_no_trip_subtitle">点击创建第一个行程</string>
+    <string name="widget_view_trip">查看行程</string>
+    <string name="widget_continue_prepare">继续准备</string>
+    <string name="widget_countdown_days">距出发 %1$d 天</string>
+    <string name="widget_ongoing_today">进行中</string>
+    <string name="widget_trip_finished">已结束</string>
+    <string name="widget_description">星途清单下一行程小组件</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">行程提醒演示</string>
+    <string name="notification_channel_desc">用于演示应用内立即通知能力</string>
+    <string name="notification_test_title">星途清单通知能力已就绪</string>
+    <string name="notification_test_content">这是一条来自原生能力实验室的测试通知</string>
+    <string name="cd_app_logo">应用图标</string>
+</resources>

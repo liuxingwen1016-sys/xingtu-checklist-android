@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorSurface"
+    android:orientation="vertical"
+    android:padding="@dimen/space_lg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:id="@+id/dialogTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/item_edit_title_create" android:textAppearance="?attr/textAppearanceTitleLarge" android:textStyle="bold" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/cancelButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/action_cancel" />
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/titleInputLayout" style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_md" android:hint="@string/field_item_title">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/titleInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="41" android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_lg" android:text="@string/section_category" android:textStyle="bold" />
+    <com.google.android.material.chip.ChipGroup android:id="@+id/categoryGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_xs" app:selectionRequired="true" app:singleSelection="true">
+        <com.google.android.material.chip.Chip android:id="@+id/categoryDocument" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category_document" />
+        <com.google.android.material.chip.Chip android:id="@+id/categoryDigital" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category_digital" />
+        <com.google.android.material.chip.Chip android:id="@+id/categoryClothing" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category_clothing" />
+        <com.google.android.material.chip.Chip android:id="@+id/categoryWork" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category_work" />
+        <com.google.android.material.chip.Chip android:id="@+id/categoryOther" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/category_other" />
+    </com.google.android.material.chip.ChipGroup>
+    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/importantSwitch" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="@dimen/space_sm" android:text="@string/item_priority_important" />
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/noteInputLayout" style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_sm" android:hint="@string/field_item_note">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/noteInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="top" android:maxLength="201" android:minLines="2" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ProgressBar android:id="@+id/loadingIndicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:visibility="gone" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_lg" android:gravity="end" android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton android:id="@+id/deleteButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/action_delete" android:textColor="@color/colorError" />
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/saveButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/action_confirm" />
+    </LinearLayout>
+</LinearLayout>

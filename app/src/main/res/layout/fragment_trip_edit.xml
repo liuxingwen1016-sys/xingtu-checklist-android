@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface">
+
+    <LinearLayout
+        android:id="@+id/headerBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/action_back"
+            android:rotation="180"
+            app:icon="@drawable/ic_chevron_right"
+            app:iconSize="20dp"
+            app:iconTint="@color/colorTextPrimary" />
+
+        <TextView
+            android:id="@+id/screenTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/trip_edit_title_create"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/formScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="6dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                style="@style/Xingtu.FormLabel"
+                android:text="@string/field_trip_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleInputLayout"
+                style="@style/Xingtu.FormInputLayout"
+                android:layout_marginTop="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleInput"
+                    style="@style/Xingtu.FormEditText"
+                    android:hint="@string/hint_trip_title"
+                    android:maxLength="31"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Xingtu.FormLabel"
+                android:layout_marginTop="8dp"
+                android:text="@string/field_destination" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/destinationInputLayout"
+                style="@style/Xingtu.FormInputLayout"
+                android:layout_marginTop="4dp"
+                app:endIconDrawable="@drawable/ic_location"
+                app:endIconMode="custom"
+                app:endIconTint="@color/colorTextSecondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/destinationInput"
+                    style="@style/Xingtu.FormEditText"
+                    android:hint="@string/hint_destination"
+                    android:maxLength="31"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Xingtu.FormLabel"
+                android:layout_marginTop="8dp"
+                android:text="@string/field_start_date" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startDateButton"
+                style="@style/Xingtu.FormDateButton"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Xingtu.FormLabel"
+                android:layout_marginTop="8dp"
+                android:text="@string/field_end_date" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/endDateButton"
+                style="@style/Xingtu.FormDateButton"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/dateError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/error_date_order"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="@color/colorError"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/Xingtu.FormLabel"
+                android:layout_marginTop="10dp"
+                android:text="@string/section_theme" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/themeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp"
+                app:chipSpacingHorizontal="12dp"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/themeIndigo"
+                    style="@style/Xingtu.ThemeChip"
+                    android:checked="true"
+                    android:contentDescription="@string/theme_name_indigo"
+                    app:chipBackgroundColor="@color/tripThemeIndigo" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/themeBlue"
+                    style="@style/Xingtu.ThemeChip"
+                    android:contentDescription="@string/theme_name_blue"
+                    app:chipBackgroundColor="@color/tripThemeBlue" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/themeTeal"
+                    style="@style/Xingtu.ThemeChip"
+                    android:contentDescription="@string/theme_name_teal"
+                    app:chipBackgroundColor="@color/tripThemeTeal" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/themeAmber"
+                    style="@style/Xingtu.ThemeChip"
+                    android:contentDescription="@string/theme_name_amber"
+                    app:chipBackgroundColor="@color/tripThemeAmber" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/themeCoral"
+                    style="@style/Xingtu.ThemeChip"
+                    android:contentDescription="@string/theme_name_coral"
+                    app:chipBackgroundColor="@color/tripThemeCoral" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/themeViolet"
+                    style="@style/Xingtu.ThemeChip"
+                    android:contentDescription="@string/theme_name_violet"
+                    app:chipBackgroundColor="@color/tripThemeViolet" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <LinearLayout
+                android:id="@+id/templateSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Xingtu.FormLabel"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/section_template" />
+
+                <RadioGroup
+                    android:id="@+id/templateGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="82dp"
+                    android:layout_marginTop="5dp"
+                    android:checkedButton="@id/templateBusiness"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/templateBusiness"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_template_option"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_template_business"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/template_business_card"
+                        android:textColor="@color/template_option_text"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/templateWeekend"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_template_option"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_template_weekend"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/tripThemeTeal"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/template_weekend_card"
+                        android:textColor="@color/template_option_text"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/templateCustom"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_template_option"
+                        android:button="@null"
+                        android:drawableTop="@drawable/ic_template_custom"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/colorTextPrimary"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/template_custom_card"
+                        android:textColor="@color/template_option_text"
+                        android:textSize="13sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/noteSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Xingtu.FormLabel"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/field_note" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Xingtu.FormInputLayout"
+                    android:layout_marginTop="4dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/noteInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:gravity="top"
+                        android:hint="@string/hint_note"
+                        android:maxLength="200"
+                        android:paddingHorizontal="14dp"
+                        android:paddingTop="12dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="@color/colorTextSecondary"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/button_create_trip"
+        android:textSize="16sp"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loadingIndicator"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/saveButton"
+        app:layout_constraintEnd_toEndOf="@id/saveButton"
+        app:layout_constraintStart_toStartOf="@id/saveButton"
+        app:layout_constraintTop_toTopOf="@id/saveButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_lg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backButton"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/action_back"
+                app:icon="@drawable/ic_chevron_right"
+                app:iconTint="@color/colorTextPrimary"
+                android:rotation="180" />
+
+            <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/shareButton"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_share_trip"
+                app:icon="@drawable/ic_share" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editButton"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_edit_trip"
+                app:icon="@drawable/ic_edit" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_xxl" />
+
+        <LinearLayout
+            android:id="@+id/notFoundPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xxl"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/detail_not_found_title" android:textAppearance="?attr/textAppearanceTitleMedium" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_sm" android:text="@string/detail_not_found_subtitle" android:textColor="@color/colorTextSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contentPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/heroCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="20dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:id="@+id/statusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#CCFFFFFF" android:textAppearance="?attr/textAppearanceLabelMedium" tools:text="即将开始" />
+                        <TextView android:id="@+id/tripTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@android:color/white" android:textAppearance="?attr/textAppearanceTitleLarge" android:textStyle="bold" tools:text="深圳技术交流行程" />
+                        <TextView android:id="@+id/tripSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="#E6FFFFFF" android:textAppearance="?attr/textAppearanceBodyMedium" tools:text="深圳 · 9月18日—9月20日" />
+                        <TextView android:id="@+id/completedText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textColor="@android:color/white" android:textAppearance="?attr/textAppearanceBodyMedium" tools:text="6/10 已完成" />
+                    </LinearLayout>
+                    <com.xinghan.xingtu.core.design.ProgressRingView android:id="@+id/progressRing" android:layout_width="76dp" android:layout_height="76dp" android:layout_marginStart="12dp" app:ringColor="@android:color/white" app:ringLabelColor="@android:color/white" app:ringStrokeWidth="7dp" app:trackColor="#55FFFFFF" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/noteCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/colorDivider"
+                app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/space_lg">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/detail_note_label" android:textStyle="bold" android:textColor="@color/colorTextPrimary" />
+                    <TextView android:id="@+id/noteText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_xs" android:textColor="@color/colorTextSecondary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_xl" android:text="@string/home_section_todo" android:textAppearance="?attr/textAppearanceTitleMedium" android:textStyle="bold" />
+            <TextView android:id="@+id/emptyItemsText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_lg" android:gravity="center" android:text="@string/detail_empty_items" android:textColor="@color/colorTextSecondary" />
+            <LinearLayout android:id="@+id/itemsContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_sm" android:orientation="vertical" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/addItemButton" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="@dimen/space_md" android:text="@string/detail_add_item" app:icon="@drawable/ic_add" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/deleteTripButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="@dimen/space_sm" android:text="@string/detail_delete_trip" android:textColor="@color/colorError" app:icon="@drawable/ic_delete" app:iconTint="@color/colorError" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

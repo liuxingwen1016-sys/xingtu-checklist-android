@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XingtuAttrs">
+        <attr name="textPrimaryColor" format="color" />
+        <attr name="textSecondaryColor" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="successColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressRingView">
+        <attr name="trackColor" format="color" />
+        <attr name="ringColor" format="color" />
+        <attr name="ringLabelColor" format="color" />
+        <attr name="ringStrokeWidth" format="dimension" />
+        <attr name="ringLabelSize" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7C7DFF</color>
+    <color name="colorPrimaryDark">#7C7DFF</color>
+    <color name="colorOnPrimary">#14163B</color>
+    <color name="colorSecondary">#FF9F79</color>
+    <color name="colorOnSecondary">#3A1B0C</color>
+    <color name="colorSuccess">#42C996</color>
+    <color name="colorBackground">#111729</color>
+    <color name="colorOnBackground">#F4F6FA</color>
+    <color name="colorSurface">#1B2332</color>
+    <color name="colorOnSurface">#F4F6FA</color>
+    <color name="colorSurfaceVariant">#242E42</color>
+    <color name="colorOnSurfaceVariant">#AAB2C0</color>
+    <color name="colorTextPrimary">#F4F6FA</color>
+    <color name="colorTextSecondary">#AAB2C0</color>
+    <color name="colorDivider">#30394A</color>
+    <color name="colorError">#FF7A7E</color>
+
+    <!-- Hero card gradient -->
+    <color name="heroGradientStart">#514EDB</color>
+    <color name="heroGradientEnd">#7A5BD8</color>
+
+    <!-- Trip theme accents -->
+    <color name="tripThemeIndigo">#7C7DFF</color>
+    <color name="tripThemeBlue">#5FA9FF</color>
+    <color name="tripThemeCoral">#FF9F79</color>
+    <color name="tripThemeTeal">#3CCFC4</color>
+    <color name="tripThemeAmber">#F5BC55</color>
+    <color name="tripThemeViolet">#B58AE8</color>
+
+    <!-- Status chips -->
+    <color name="statusUpcomingBg">#2C2F55</color>
+    <color name="statusUpcomingText">#A5A6FF</color>
+    <color name="statusOngoingBg">#4A2E1F</color>
+    <color name="statusOngoingText">#FF9F79</color>
+    <color name="statusFinishedBg">#2A3345</color>
+    <color name="statusFinishedText">#AAB2C0</color>
+
+    <!-- Charts -->
+    <color name="chartBarPrimary">#7C7DFF</color>
+    <color name="chartBarMuted">#30394A</color>
+</resources>
